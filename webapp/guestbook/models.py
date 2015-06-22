@@ -5,13 +5,15 @@ class Post(models.Model):
     firstName = models.CharField(max_length=100)
     lastName  = models.CharField(max_length=100)
     address = models.CharField(max_length = 50)
-    content = mosels.TextField()
+    content = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
 
     slug = models.SlugField(unique=True,max_length = 255)
 
     class Meta:
 	ordering = ['-created']
+
+
     def __unicode__(self):
 	return u'%s'%self.title
 
