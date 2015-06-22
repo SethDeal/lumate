@@ -11,7 +11,7 @@ class Post(models.Model):
     slug = models.SlugField(unique=True,max_length = 255)
 
     class Meta:
-	ordering = ['-created']
+	ordering = ['-slug']
 
 
     def __unicode__(self):
