@@ -12,10 +12,10 @@ class Post(models.Model):
 
     class Meta:
 	ordering = ['-created']
-    def__unicode__(self):
+    def __unicode__(self):
 	return u'%s'%self.title
 
-    defget_absolute_url(self):
+    def get_absolute_url(self):
 	return reverse('guestbook.views.post',args=[self.slug])
 
 # Create your models here.
