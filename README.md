@@ -1,2 +1,0 @@
-# lumate
-Dev Challenge
