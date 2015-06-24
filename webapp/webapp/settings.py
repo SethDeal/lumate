@@ -35,7 +35,9 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
     'django.contrib.staticfiles',
+    'django.contrib.admin',
     'guestbook',
 )
 
@@ -59,7 +61,11 @@ WSGI_APPLICATION = 'webapp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.path.join(BASE_DIR, 'guestbook.db'),
+        'NAME': 'guestbook',
+	'USER': 'theuser',
+	'PASSWORD': 'lolplaintext',
+	'HOST': 'localhost',
+	'PORT': '',
     }
 }
 
